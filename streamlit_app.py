@@ -9,6 +9,7 @@ def get_data():
     return(pd.read_csv('https://raw.githubusercontent.com/SaskOpenData/covid19-sask/master/data/cases-sk.csv'))
 
 
+
 # case_data = get_data()
 
 st.header('Covid in Saskatchewan')
@@ -65,3 +66,7 @@ with col3:
     value_box(400, 'DANGER!!', 'danger')
 
 
+
+if st.button('Get data'):
+    dta = get_data()
+    st.write(dta)
